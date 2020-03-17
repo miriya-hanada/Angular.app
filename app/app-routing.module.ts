@@ -1,0 +1,24 @@
+import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
+
+import { RouterModule, Routes } from '@angular/router';
+import { SimpleFormComponent } from './simple-form/simple-form.component';
+import { BetterFormComponent } from './better-form/better-form.component';
+
+
+
+@NgModule({
+  declarations: [],
+  imports: [
+    CommonModule,
+    RouterModule.forRoot([
+      { path: '', redirectTo: '/simpleform', pathMatch: 'full' },
+      { path: 'simple-form', component: SimpleFormComponent },
+      { path: 'better-form', component: BetterFormComponent }
+    ])
+  ],
+  exports: [
+    RouterModule
+  ],
+})
+export class AppRoutingModule { }

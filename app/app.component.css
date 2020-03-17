@@ -1,0 +1,22 @@
+a {
+    padding: 10px;
+    margin-right: 4px;
+    background-color: darkseagreen;
+    color: lightyellow;
+    text-decoration: none;
+}
+
+a:link, a:visited , a:hover {
+    color: lightyellow;
+}
+
+a.selected-item {
+    color: darkseagreen;
+    background-color: lightyellow;
+}
+
+div {
+    padding: 50px;
+    background-color: lightyellow;
+    color: darkseagreen;
+}
