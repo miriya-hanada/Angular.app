@@ -10,5 +10,6 @@ export class AppComponent {
   paths = [
     { pathname: "./simple-form", title: "Simple Form" },
     { pathname: "./better-form", title: "Better Form" }
+    { pathname: 'controls', title:"Controls" }
   ];
 }
