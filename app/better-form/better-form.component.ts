@@ -8,33 +8,36 @@ import { FormGroup, FormControl, Validators } from '@angular/forms';
 })
 export class BetterFormComponent implements OnInit {
   calcForm: FormGroup;
-  result: string = '足し算しましょう';
+  result: string = "足し算しましょう";
 
   constructor() { }
 
   ngOnInit(): void {
     this.calcForm = new FormGroup({
-      'fieldOne': new FormControl('', Validators.required),
-      'fieldTwo': new FormControl('', [Validators.required, Validators.maxLength(5)])
+      'fieldOne': new FormControl('0',Validators.required),
+      'fieldTwo': new FormControl('0',
+        [Validators.required,Validators.maxLength(5)])
     });
   }
 
-  get fieldOne() { return this.calcForm.get("fieldOne"); }
-  get fieldTwo() { return this.calcForm.get("fieldTwo"); }
+  get fieldOne(){return this.calcForm.get("fieldOne");}
+  get fieldTwo(){return this.calcForm.get("fieldTwo");}
   addAnyway() {
-    let text1: string = this.fieldOne.value;
-    let text2: string = this.fieldTwo.value;
-    let resultStr: string = '';
+    let text1:string = this.fieldOne.value;
+    let text2:string = this.fieldTwo.value;
+    let resultStr: string = "";
 
-    if (Number.isNaN(Number(text1)) || Number.isNaN(Number(text2))) {
+    if (Number.isNaN(Number(text1)) || Number.isNaN
+(Number(text2))) {
       resultStr = text1 + text2;
     } else {
-      resultStr = `${text1}+${text2} = ${Number(text1) + Number(text2)}`;
+      resultStr = `${text1}+${text2} = ${Number(text1) +
+Number(text2)}`;
     }
     this.result = resultStr;
   }
 
   clearResult() {
-    this.result = '';
+    this.result="";
   }
 }
